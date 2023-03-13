@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+/* header */
+
+header {
+  position: fixed;
+  z-index: 2;
+  display: inline-block;
+  height: 85px;
+  width: 100%;
+  background-color: #fff;
+}
+.row {
+  float: left;
+  width: 100%;
+}
+.menu ul li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 15px;
+}
+.menu ul {
+  float: right;
+  margin: 0px;
+  padding: 15px;
+}
+.menu ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul li a:hover {
+  border-bottom: solid purple;
+  color: purple;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.logo {
+  float: left;
+  padding: 15px;
+}
+.logo img {
+  width: 250px;
+}
+.container {
+  margin: 0 auto;
+  width: 1180px;
+}
+
+/* nav mobile */
+
+.nav-bar__btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+  margin-top: 13px;
+}
+
+.nav__input {
+  display: none;
+}
+.nav__input:checked ~ .nav__overlay {
+  display: block;
+  opacity: 0.7;
+}
+.nav__input:checked ~ .menu__mobile {
+  transition: linear 0.3s;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(28, 27, 27, 0.845);
+  display: none;
+  animation: fadeIn linear 1s;
+}
+
+.menu__mobile {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 100%;
+  transform: translateX(105%);
+  transition: linear 0.3s;
+  opacity: 0;
+}
+
+.menu__mobile ul {
+  margin-top: 30px;
+}
+
+.menu__mobile ul li {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.menu__mobile ul li a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menu__mobile ul li a:hover {
+  border-bottom: solid purple;
+  color: purple;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.menu__mobile-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+/* banner */
+
+.banner {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/YleDJnpKGGfPy488/banner_anhdaidien-AMqV02kX1OHqBpVO.jpg");
+  height: 750px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* background */
+
+.bg1 {
+  height: 560px;
+  background-color: rgb(222, 217, 217);
+}
+
+.bg2 {
+  height: 560px;
+}
+.bg0 {
+  height: 560px;
+  background-color: rgb(222, 217, 217);
+}
+.p1 {
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.p1 .card {
+  width: 340px;
+  min-height: 380px;
+  float: left;
+  margin: 10px;
+  border-radius: 5%;
+}
+.p1 .card h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.p2 {
+  padding: 35px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.p2 img {
+  width: 500px;
+}
+
+.p2 > .box-left {
+  float: left;
+  margin-right: 40px;
+  padding-right: 10px;
+  width: 50%;
+}
+
+.p2 h4,
+.p2 h1 span {
+  color: rgb(118, 52, 191);
+}
+
+.p2 h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.p2 p {
+  margin-top: 30px;
+}
+
+footer {
+  width: 100%;
+  padding: 50px;
+  background-color: rgb(183, 180, 175);
+  display: flex;
+}
+
+footer .footer-logo {
+  width: 30%;
+}
+footer .footer-logo img {
+  padding: 10px;
+  width: 250px;
+  float: left;
+  margin: 0 20px;
+}
+footer .footer-content {
+  padding: 10px;
+  margin: 0 20px;
+  float: left;
+  width: 30%;
+}
+
+footer .footer-info {
+  padding: 10px;
+  float: left;
+  margin: 0 20px;
+  width: 30%;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: black;
+  line-height: 2;
+}
+
+.footer-info a:hover {
+  border-bottom: solid purple;
+  color: purple;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu ul li a {
+    display: none;
+  }
+  body {
+    width: 100%;
+  }
+  .p2,
+  .p1,
+  .container,
+  .row,
+  .p2 .box-left,
+  .p2 .box-right,
+  .p2 img,
+  .p2 p,
+  .footer-logo,
+  footer .footer-content,
+  footer .footer-info,
+  footer .footer img,
+  footer {
+    width: 100%;
+    padding: 0;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    align-items: center;
+    align-self: center;
+  }
+  footer .footer-content,
+  footer .footer-info,
+  footer .footer-logo img {
+    margin: 0;
+    padding: 0;
+  }
+  footer span {
+    display: block;
+  }
+  .bg1,
+  .bg2 {
+    height: 950px;
+  }
+
+  .bg1 .p2> .box-right {
+    float: left;
+  }
+
+  .banner {
+    height: 300px;
+  }
+  .bg0 {
+    height: 1020px;
+  }
+  .p1 {
+    padding: 10px 0;
+    height: 1000px;
+    background-color: rgb(222, 217, 217);
+    display: block;
+  }
+  .p1 .card {
+    display: block;
+    float: none;
+    margin: 15px auto;
+    width: 40%;
+    min-height: 300px;
+  }
+
+  .nav-bar__btn {
+    display: block;
+    position: fixed;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .lich_trinh {
+    height: 1250px !important;
+  }
+  .gioi_thieu {
+    height: 1000px !important;
+  }
+  .giai_thuong {
+    height: 680px !important;
+  }
+  .tieu_chi {
+    height: 1600px !important;
+  }
+}
